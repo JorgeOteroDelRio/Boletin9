@@ -12,14 +12,18 @@ import javax.swing.JOptionPane;
 public class Tabla {
     
     public static void pedirNumero(){
+        boolean condicionFin = true;
+        while(condicionFin){
         int n = Integer.parseInt(JOptionPane.showInputDialog("Introduce un numero"));
         if(n!=0){
             for(int i = 1;i<=10;i++){
             JOptionPane.showMessageDialog(null,n + "*" + i + "=" + n*i);
             }
         }
-        else
+        else{
             JOptionPane.showMessageDialog(null, "Ha salido del programa");
+            condicionFin=false;}
+        }
     }
     
 }
